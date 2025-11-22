@@ -1,6 +1,6 @@
 /* Site-wide custom styles */
 :root{
-  --bg: #0e141b;
+  --bg: #051c39;
   --text: #e6eef8;
   --muted: #9fb0c8;
 }
@@ -38,19 +38,44 @@ body{
   color:var(--text);
 }
 
+.menu-toggle{
+  background:transparent;
+  border:0;
+  color:var(--text);
+  display:none; /* shown on small screens */
+  cursor:pointer;
+  padding:8px;
+}
+.menu-toggle .hamburger{
+  display:block;
+  width:20px;
+  height:2px;
+  background:var(--text);
+  position:relative;
+}
+.menu-toggle .hamburger::before,
+.menu-toggle .hamburger::after{
+  content:"";
+  position:absolute;
+  left:0;
+  width:20px;
+  height:2px;
+  background:var(--text);
+}
+.menu-toggle .hamburger::before{ top:-6px; }
+.menu-toggle .hamburger::after{ top:6px; }
+
 .header-right{
   display:flex;
-  flex-direction:column;
-  align-items:flex-end;
-  gap:6px;
+  flex-direction:row;
+  align-items:center;
+  gap:18px;
 }
-
 .header-right a{
   color:var(--muted);
   text-decoration:none;
   font-size:0.95rem;
 }
-
 .header-right a:hover{
   color:var(--text);
   text-decoration:underline;
@@ -71,4 +96,47 @@ body{
 /* Respect links inside content */
 .site-main a{
   color:#8fb8ff;
+}
+
+/* Footer links */
+.footer-inner{
+  display:flex;
+  flex-direction:row;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+  max-width:960px;
+  margin:0 auto;
+}
+.footer-links{
+  display:flex;
+  gap:12px;
+  align-items:center;
+}
+.footer-link{
+  display:inline-flex;
+  gap:8px;
+  align-items:center;
+  color:var(--muted);
+  text-decoration:none;
+}
+.footer-link svg{ display:block; color:var(--muted); }
+.footer-link:hover{ color:var(--text); }
+
+/* Responsive: hide nav and show toggle on small screens */
+@media (max-width:700px){
+  .menu-toggle{ display:block; }
+  .header-right{
+    display:none;
+    position:absolute;
+    right:20px;
+    top:56px;
+    background:rgba(10,16,22,0.97);
+    padding:12px;
+    border-radius:6px;
+    flex-direction:column;
+    box-shadow:0 6px 18px rgba(0,0,0,0.6);
+  }
+  .nav-open .header-right{ display:flex; }
+  .footer-inner{ flex-direction:column; gap:8px; }
 }
