@@ -8,4 +8,4 @@ Hello, My name is Nazrin
 
 - [Home](/)
 - [About](/about/)
-- [Projects](/contact/)
+- [Projects](/projects/)
