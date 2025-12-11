@@ -1,10 +1,18 @@
 ---
+<<<<<<< HEAD
 layout: page
+=======
+layout: default
+>>>>>>> f7bdb1e60f403d0693929ce506f2f8878223d995
 title: Projects
 permalink: /projects/
 ---
 
+<<<<<<< HEAD
 ## Project 1
+=======
+
+>>>>>>> f7bdb1e60f403d0693929ce506f2f8878223d995
 
 ### How does hardware work?
 
@@ -20,6 +28,9 @@ In this project, we visited a school to tell the students about ADA University a
 We also planned a group activity that let them work together. They really enjoyed this part and had fun as a team.
 At the end of the day, we gave each student a certificate with their name on it. They were really happy and excited to receive their certificates. It was a great experience for everyone involved.
  
+
 ![hour of code]({{ '/assets/images/hour of code.jpg' | relative_url }}){: style="max-width:200px; width:80%; height:auto; display:block; margin:1.5rem auto;"}
+
+
 
 
